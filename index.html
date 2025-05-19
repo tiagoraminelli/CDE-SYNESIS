@@ -185,59 +185,110 @@
 </section>
 
 
-  
+<!-- galeria con modal -->  
 
-
-
-<div class="container py-5">
-
-
-      <h3 id="objetivos">Objetivos Específicos</h3>
-      <div id="objetivosCarrusel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./assets/img/recaudar-fondos.jpg" class="d-block w-100" alt="Recaudación de fondos">
-            <div class="carousel-caption d-none d-md-block">
-              <p>Gestionar eventos para la recaudación de fondos y fomentar el sentido de pertenencia.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/img/transparencia.jpg" class="d-block w-100" alt="Transparencia estudiantil">
-            <div class="carousel-caption d-none d-md-block">
-              <p>Reformar el estatuto para mejorar la transparencia y representatividad estudiantil.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/img/espacios.jpg" class="d-block w-100" alt="Espacios de estudio">
-            <div class="carousel-caption d-none d-md-block">
-              <p>Crear espacios físicos y virtuales para el bienestar y estudio colaborativo.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/img/cooperacion.jpg" class="d-block w-100" alt="Cooperación institucional">
-            <div class="carousel-caption d-none d-md-block">
-              <p>Establecer redes de cooperación institucional con organismos públicos y privados.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./assets/img/planificacion.jpg" class="d-block w-100" alt="Planificación educativa">
-            <div class="carousel-caption d-none d-md-block">
-              <p>Acompañar a estudiantes en la planificación de su trayectoria educativa.</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#objetivosCarrusel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#objetivosCarrusel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
-        </button>
+<section class="container py-5">
+  <h3 id="objetivos">Objetivos Específicos</h3>
+  <div class="row g-4" id="galeriaObjetivos">
+    <!-- Imagen 1 -->
+    <div class="col-md-4">
+      <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#modal1">
+        <img src="./assets/img/recaudar-fondos.jpg" alt="Recaudación de fondos" class="img-fluid rounded shadow-sm">
       </div>
-    </section>
+    </div>
 
+    <!-- Imagen 2 -->
+    <div class="col-md-4">
+      <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#modal2">
+        <img src="./assets/img/transparencia.jpg" alt="Transparencia estudiantil" class="img-fluid rounded shadow-sm">
+      </div>
+    </div>
+
+    <!-- Imagen 3 -->
+    <div class="col-md-4">
+      <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#modal3">
+        <img src="./assets/img/espacios.jpg" alt="Espacios de estudio" class="img-fluid rounded shadow-sm">
+      </div>
+    </div>
+
+    <!-- Imagen 4 -->
+    <div class="col-md-4">
+      <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#modal4">
+        <img src="./assets/img/cooperacion.jpg" alt="Cooperación institucional" class="img-fluid rounded shadow-sm">
+      </div>
+    </div>
+
+    <!-- Imagen 5 -->
+    <div class="col-md-4">
+      <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#modal5">
+        <img src="./assets/img/planificacion.jpg" alt="Planificación educativa" class="img-fluid rounded shadow-sm">
+      </div>
+    </div>
+  </div>
 </section>
+
+<!-- Modals -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <img src="./assets/img/recaudar-fondos.jpg" class="img-fluid rounded-top" alt="">
+      <div class="modal-body">
+        <p class="mb-0">Gestionar eventos para la recaudación de fondos y fomentar el sentido de pertenencia.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <img src="./assets/img/transparencia.jpg" class="img-fluid rounded-top" alt="">
+      <div class="modal-body">
+        <p class="mb-0">Reformar el estatuto para mejorar la transparencia y representatividad estudiantil.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <img src="./assets/img/espacios.jpg" class="img-fluid rounded-top" alt="">
+      <div class="modal-body">
+        <p class="mb-0">Crear espacios físicos y virtuales para el bienestar y estudio colaborativo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <img src="./assets/img/cooperacion.jpg" class="img-fluid rounded-top" alt="">
+      <div class="modal-body">
+        <p class="mb-0">Establecer redes de cooperación institucional con organismos públicos y privados.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <img src="./assets/img/planificacion.jpg" class="img-fluid rounded-top" alt="">
+      <div class="modal-body">
+        <p class="mb-0">Acompañar a estudiantes en la planificación de su trayectoria educativa.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- fin galeria -->
+
+
+
+
 
 <section id="estructura" class="py-5">
   <h2 class="text-center mb-5">Estructura Organizativa</h2>
@@ -255,84 +306,68 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
   </div>
   <div class="offcanvas-body">
-    <!-- Contenido de la estructura -->
     <div class="container">
-      <!-- Aquí va el contenido original que ya tienes -->
+
       <div class="row align-items-center mb-4">
-        <div class="col-md-6">
-          
-        </div>
         <div class="col-md-12">
           <h5>Presidencia</h5>
-          <p>Encargada de representar al centro y liderar las decisiones generales del equipo.</p>
+          <p>Encargada de representar al centro, liderar el equipo y garantizar el cumplimiento de los objetivos generales.</p>
         </div>
       </div>
 
-      <div class="row align-items-center mb-4 flex-md-row-reverse">
-        <div class="col-md-6">
-          
-        </div>
+      <div class="row align-items-center mb-4">
         <div class="col-md-12">
           <h5>Secretaría General</h5>
-          <p>Coordina la organización interna y lleva registro de reuniones y planificación.</p>
+          <p>Coordina la organización interna, agenda y registro de actas y reuniones.</p>
         </div>
       </div>
 
-        <div class="row align-items-center mb-4 flex-md-row-reverse">
-        <div class="col-md-6">
-          
-        </div>
+      <div class="row align-items-center mb-4">
         <div class="col-md-12">
-          <h5>Secretaría General</h5>
-          <p>Coordina la organización interna y lleva registro de reuniones y planificación.</p>
+          <h5>Secretaría de Finanzas y Actas</h5>
+          <p>Administra los fondos, colabora con la rendición de cuentas y apoya en la documentación institucional.</p>
         </div>
       </div>
 
-        <div class="row align-items-center mb-4 flex-md-row-reverse">
-        <div class="col-md-6">
-          
-        </div>
+      <div class="row align-items-center mb-4">
         <div class="col-md-12">
-          <h5>Secretaría General</h5>
-          <p>Coordina la organización interna y lleva registro de reuniones y planificación.</p>
+          <h5>Secretaría de Género y Diversidad</h5>
+          <p>Promueve espacios seguros, inclusivos y con perspectiva de género dentro de la comunidad educativa.</p>
         </div>
       </div>
 
-        <div class="row align-items-center mb-4 flex-md-row-reverse">
-        <div class="col-md-6">
-         
-        </div>
+      <div class="row align-items-center mb-4">
         <div class="col-md-12">
-          <h5>Secretaría General</h5>
-          <p>Coordina la organización interna y lleva registro de reuniones y planificación.</p>
+          <h5>Secretaría de Prensa y Difusión</h5>
+          <p>Se encarga de la comunicación institucional, redes sociales y la difusión de actividades del centro.</p>
         </div>
       </div>
 
-        <div class="row align-items-center mb-4 flex-md-row-reverse">
-        <div class="col-md-6">
-        
-        </div>
+      <div class="row align-items-center mb-4">
         <div class="col-md-12">
-          <h5>Secretaría General</h5>
-          <p>Coordina la organización interna y lleva registro de reuniones y planificación.</p>
+          <h5>Secretaría de Derechos Humanos e Inclusión</h5>
+          <p>Trabaja en la defensa de los derechos estudiantiles y en la integración plena de todas las identidades.</p>
         </div>
       </div>
 
-        <div class="row align-items-center mb-4 flex-md-row-reverse">
-        <div class="col-md-6">
-          
-        </div>
+      <div class="row align-items-center mb-4">
         <div class="col-md-12">
-          <h5>Secretaría General</h5>
-          <p>Coordina la organización interna y lleva registro de reuniones y planificación.</p>
+          <h5>Secretaría Académica y Asuntos Estudiantiles</h5>
+          <p>Brinda acompañamiento en lo académico, impulsa tutorías y canaliza las demandas estudiantiles.</p>
         </div>
       </div>
 
-      <!-- Repite la estructura para las demás secretarías como ya lo tenías... -->
+      <div class="row align-items-center mb-4">
+        <div class="col-md-12">
+          <h5>Secretaría de Cultura y Recreación</h5>
+          <p>Organiza actividades culturales, artísticas y recreativas que fomentan la integración y participación.</p>
+        </div>
+      </div>
 
     </div>
   </div>
 </div>
+
 
 
 <section id="actividades" class="py-5">
@@ -523,9 +558,7 @@
     </div>
   </div> 
 
-  <footer>
-    &copy; 2025 Centro de Estudiantes Synesis – Todos los derechos reservados
-  </footer>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./js/modal.js"></script>
@@ -541,4 +574,7 @@
 </script>
 
 </body>
+  <footer>
+    &copy; 2025 Centro de Estudiantes Synesis – Todos los derechos reservados
+  </footer>
 </html>
