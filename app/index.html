@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro de Estudiantes Synesis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+
+
+</head>
+<a href="#navbarNav" class="btn btn-primary rounded-circle shadow" id="btn-up" title="Volver al menú">
+  <i class="bi bi-arrow-up-short fs-3"></i>
+</a>
+
+<!-- Botón de enlaces flotante -->
+<div id="socialToggle" class="btn-group-vertical position-fixed" style="bottom: 25px; left: 25px; z-index: 1000;">
+  <!-- Botones secundarios (inicialmente ocultos) -->
+  <a id="btn-instagram"  href="https://www.instagram.com/synesis.centroestudiantil/" class="btn btn-danger mb-2 d-none" target="_blank" title="Instagram">
+    <i class="bi bi-instagram"></i>
+  </a>
+  <a id="btn-whatsapp" href="https://wa.me/.." class="btn btn-success mb-2 d-none" target="_blank" title="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Botón principal -->
+  <button id="toggleSocialBtn" class="btn btn-dark" title="Enlaces">
+    <i class="bi bi-link-45deg fs-4"></i>
+  </button>
+</div>
+
+
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/img/logo.png" alt="Logo Synesis" width="40" height="40" class="d-inline-block align-text-center">
+        Synesis
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#intro">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#objetivos">Objetivos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#estructura">Organización</a></li>
+          <li class="nav-item"><a class="nav-link" href="#actividades">Actividades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#metodologia">Metodología</a></li>
+          <li class="nav-item"><a class="nav-link" href="#evaluacion">Evaluación</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="hero d-flex align-items-center justify-content-center text-center text-white">
+  <div class="overlay"></div>
+  <div class="hero-content position-relative">
+    <h1 class="display-4 fw-bold">Centro de Estudiantes Synesis</h1>
+    <p class="lead">Un modelo inclusivo, participativo y transformador</p>
+    <a href="#estructura" class="btn btn-outline-light mt-3">Conocer más</a>
+  </div>
+</div>
+
+
+
+<section id="documentos" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Documentos Institucionales</h2>
+    <div class="row g-4">
+      
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card text-center h-100 shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-file-earmark-text-fill display-4 text-primary mb-3"></i>
+            <h5 class="card-title">Estatuto del Centro</h5>
+            <p class="card-text">Documento base que rige las normas internas del Centro de Estudiantes.</p>
+            <a href="../ficha\Estatuto.pdf" target="_blank" class="btn btn-outline-primary btn-sm">Ver documento</a>
+          </div>
+        </div>
+      </div>
+
+<!-- Card 2 con botón que abre modal -->
+<div class="col-md-4">
+  <div class="card text-center h-100 shadow-sm">
+    <div class="card-body">
+      <i class="bi bi-ui-checks-grid display-4 text-success mb-3"></i>
+      <h5 class="card-title">Formularios Útiles</h5>
+      <p class="card-text">Selecciona un formulario para descargar según tu necesidad académica.</p>
+      <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#formularioModal">
+        Ver formularios
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="formularioModal" tabindex="-1" aria-labelledby="formularioModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content border-0 shadow">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="formularioModalLabel">Descarga de Fichas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="formularioSelect" class="form-label">Selecciona un formulario</label>
+            <select class="form-select" id="formularioSelect" onchange="abrirFormulario(this.value)">
+              <option selected disabled>Elegí un formulario</option>
+              <option target="_blank" value="../ficha\formulario_proyecto_estudiantil.pdf">Ficha de propuestas de meriendas</option>
+
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Card 3 -->
+<div class="col-md-4">
+  <div class="card text-center h-100 shadow-sm">
+    <div class="card-body">
+      <i class="bi bi-folder-fill display-4 text-warning mb-3"></i>
+      <h5 class="card-title">Proyectos en Curso</h5>
+      <p class="card-text">Listado de proyectos en ejecución y sus responsables.</p>
+      <!-- Botón que abre el modal -->
+      <button class="btn btn-outline-warning btn-sm" data-bs-toggle="modal" data-bs-target="#proyectosModal">
+        Acceder
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+ <!-- Modal de Proyectos -->
+<div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="proyectosModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content shadow">
+      <div class="modal-header bg-warning text-dark">
+        <h5 class="modal-title" id="proyectosModalLabel">Proyectos en Curso</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>Proyecto</th>
+                <th>Responsable</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Feria de apuntes y biblioteca digital</td>
+                <td>Secretaría Académica</td>
+                <td>En proceso</td>
+              </tr>
+            
+              <!-- Puedes agregar más proyectos aquí -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Puedes seguir agregando más cards duplicando el bloque -->
+
+    </div>
+  </div>
+</section>
+
+
+  
+
+
+
+<div class="container py-5">
+
+
+      <h3 id="objetivos">Objetivos Específicos</h3>
+      <div id="objetivosCarrusel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/img/recaudar-fondos.jpg" class="d-block w-100" alt="Recaudación de fondos">
+            <div class="carousel-caption d-none d-md-block">
+              <p>Gestionar eventos para la recaudación de fondos y fomentar el sentido de pertenencia.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/img/transparencia.jpg" class="d-block w-100" alt="Transparencia estudiantil">
+            <div class="carousel-caption d-none d-md-block">
+              <p>Reformar el estatuto para mejorar la transparencia y representatividad estudiantil.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/img/espacios.jpg" class="d-block w-100" alt="Espacios de estudio">
+            <div class="carousel-caption d-none d-md-block">
+              <p>Crear espacios físicos y virtuales para el bienestar y estudio colaborativo.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/img/cooperacion.jpg" class="d-block w-100" alt="Cooperación institucional">
+            <div class="carousel-caption d-none d-md-block">
+              <p>Establecer redes de cooperación institucional con organismos públicos y privados.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/img/planificacion.jpg" class="d-block w-100" alt="Planificación educativa">
+            <div class="carousel-caption d-none d-md-block">
+              <p>Acompañar a estudiantes en la planificación de su trayectoria educativa.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#objetivosCarrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#objetivosCarrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+
+</section>
+
+<section id="estructura" class="py-5">
+  <h2 class="text-center mb-5">Estructura Organizativa</h2>
+  <!-- Botón para abrir offcanvas -->
+<div class="text-center my-4">
+  <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#estructuraOffcanvas">
+    Ver estructura organizativa
+  </button>
+</div>
+
+<!-- Offcanvas Bootstrap -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="estructuraOffcanvas" aria-labelledby="estructuraOffcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="estructuraOffcanvasLabel">Estructura Organizativa</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- Contenido de la estructura -->
+    <div class="container">
+      <!-- Aquí va el contenido original que ya tienes -->
+      <div class="row align-items-center mb-4">
+        <div class="col-md-6">
+          
+        </div>
+        <div class="col-md-6">
+          <h5>Presidencia</h5>
+          <p>Encargada de representar al centro y liderar las decisiones generales del equipo.</p>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-4 flex-md-row-reverse">
+        <div class="col-md-6">
+          
+        </div>
+        <div class="col-md-6">
+          <h5>Secretaría General</h5>
+          <p>Coordina la organización interna y lleva registro de reuniones y planificación.</p>
+        </div>
+      </div>
+
+        <div class="row align-items-center mb-4 flex-md-row-reverse">
+        <div class="col-md-6">
+          
+        </div>
+        <div class="col-md-6">
+          <h5>Secretaría General</h5>
+          <p>Coordina la organización interna y lleva registro de reuniones y planificación.</p>
+        </div>
+      </div>
+
+        <div class="row align-items-center mb-4 flex-md-row-reverse">
+        <div class="col-md-6">
+          
+        </div>
+        <div class="col-md-6">
+          <h5>Secretaría General</h5>
+          <p>Coordina la organización interna y lleva registro de reuniones y planificación.</p>
+        </div>
+      </div>
+
+        <div class="row align-items-center mb-4 flex-md-row-reverse">
+        <div class="col-md-6">
+         
+        </div>
+        <div class="col-md-6">
+          <h5>Secretaría General</h5>
+          <p>Coordina la organización interna y lleva registro de reuniones y planificación.</p>
+        </div>
+      </div>
+
+        <div class="row align-items-center mb-4 flex-md-row-reverse">
+        <div class="col-md-6">
+        
+        </div>
+        <div class="col-md-6">
+          <h5>Secretaría General</h5>
+          <p>Coordina la organización interna y lleva registro de reuniones y planificación.</p>
+        </div>
+      </div>
+
+        <div class="row align-items-center mb-4 flex-md-row-reverse">
+        <div class="col-md-6">
+          
+        </div>
+        <div class="col-md-6">
+          <h5>Secretaría General</h5>
+          <p>Coordina la organización interna y lleva registro de reuniones y planificación.</p>
+        </div>
+      </div>
+
+      <!-- Repite la estructura para las demás secretarías como ya lo tenías... -->
+
+    </div>
+  </div>
+</div>
+
+
+<section id="actividades" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Actividades</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover align-middle text-center shadow-sm">
+        <thead class="table-success">
+          <tr>
+            <th scope="col">Tipo</th>
+            <th scope="col">Nombre del Evento</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Lugar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Evento Institucional</td>
+            <td>Fiesta del Día del Estudiante</td>
+            <td>a determinar</td>
+            <td>Patio Central</td>
+          </tr>
+          <tr>
+            <td>Evento Institucional</td>
+            <td>Peña estudiantil abierta</td>
+            <td>a determinar</td>
+            <td>Salón Multiuso</td>
+          </tr>
+          <tr>
+            <td>Evento Institucional</td>
+            <td>Fiesta de Egresados</td>
+            <td>a determinar</td>
+            <td>SUM Institucional</td>
+          </tr>
+          <tr>
+            <td>Charla</td>
+            <td>ESI, Salud Mental, Inserción Laboral</td>
+            <td>a determinar</td>
+            <td>a determinar</td>
+          </tr>
+          <tr>
+            <td>Charla</td>
+            <td>Charlas técnicas por carrera</td>
+            <td>Fechas variables</td>
+            <td>Dependencia por Tecnicatura</td>
+          </tr>
+          <tr>
+            <td>Taller</td>
+            <td>Contabilidad / Programación</td>
+            <td>Mensual</td>
+            <td>a determinar</td>
+          </tr>
+          <tr>
+            <td>Taller</td>
+            <td>Perfil Profesional / LinkedIn</td>
+            <td>Bimestre</td>
+            <td>a determinar</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<section id="metodologia" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Nuestra Metodología de Trabajo</h2>
+    <div class="row g-4">
+      
+      <!-- Paso 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 text-center shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-diagram-3-fill display-5 text-orange mb-3"></i>
+            <h5 class="card-title">Planificación</h5>
+            <p class="card-text">Cada secretaría diseña su plan de acción según objetivos anuales y necesidades estudiantiles.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paso 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 text-center shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-check2-square display-5 text-teal mb-3"></i>
+            <h5 class="card-title">Autorizaciones</h5>
+            <p class="card-text">Coordinación y aval institucional para asegurar respaldo administrativo y logístico.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paso 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 text-center shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-cash-coin display-5 text-success mb-3"></i>
+            <h5 class="card-title">Recaudación</h5>
+            <p class="card-text">Actividades como ferias o ventas son realizadas para autofinanciar los proyectos estudiantiles.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paso 4 -->
+      <div class="col-md-6 col-lg-6">
+        <div class="card h-100 text-center shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-megaphone-fill display-5 text-primary mb-3"></i>
+            <h5 class="card-title">Difusión</h5>
+            <p class="card-text">La comunicación se realiza mediante redes sociales, carteleras físicas y visitas a las aulas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paso 5 -->
+      <div class="col-md-6 col-lg-6">
+        <div class="card h-100 text-center shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-bar-chart-line-fill display-5 text-secondary mb-3"></i>
+            <h5 class="card-title">Evaluación</h5>
+            <p class="card-text">Se elaboran informes de impacto para revisar resultados, mejorar procesos y rendir cuentas.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="evaluacion" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Criterios de Evaluación</h2>
+    <div class="row g-4">
+      
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card text-center h-100 shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-people-fill display-5 text-teal mb-3"></i>
+            <h5 class="card-title">Participación</h5>
+            <p class="card-text">Medimos la implicación activa del estudiantado en las actividades y procesos del centro.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card text-center h-100 shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-bullseye display-5 text-orange mb-3"></i>
+            <h5 class="card-title">Objetivos</h5>
+            <p class="card-text">Evaluamos el grado de cumplimiento de los objetivos establecidos por cada secretaría.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card text-center h-100 shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-bar-chart-fill display-5 text-success mb-3"></i>
+            <h5 class="card-title">Encuestas</h5>
+            <p class="card-text">Aplicamos encuestas de satisfacción para conocer la percepción del estudiantado.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card text-center h-100 shadow-sm border-0">
+          <div class="card-body">
+            <i class="bi bi-journal-text display-5 text-primary mb-3"></i>
+            <h5 class="card-title">Informes</h5>
+            <p class="card-text">Generamos reportes de impacto institucional para mejorar continuamente nuestra gestión.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <div class="quote">
+      "La organización y el compromiso construyen una comunidad educativa más justa, inclusiva y transformadora."
+    </div>
+  </div> 
+
+  <footer>
+    &copy; 2025 Centro de Estudiantes Synesis – Todos los derechos reservados
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/modal.js"></script>
+  <script>
+  const toggleBtn = document.getElementById("toggleSocialBtn");
+  const insta = document.getElementById("btn-instagram");
+  const wsp = document.getElementById("btn-whatsapp");
+
+  toggleBtn.addEventListener("click", () => {
+    insta.classList.toggle("d-none");
+    wsp.classList.toggle("d-none");
+  });
+</script>
+
+</body>
+</html>
