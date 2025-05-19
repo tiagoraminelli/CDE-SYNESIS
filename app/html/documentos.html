@@ -1,0 +1,116 @@
+<section id="documentos" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Documentos Institucionales</h2>
+    <div class="row g-4">
+      
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card text-center h-100 shadow-sm">
+          <div class="card-body">
+            <i class="bi bi-file-earmark-text-fill display-4 text-primary mb-3"></i>
+            <h5 class="card-title">Estatuto del Centro</h5>
+            <p class="card-text">Documento base que rige las normas internas del Centro de Estudiantes.</p>
+            <a href="../ficha\Estatuto.pdf" target="_blank" class="btn btn-outline-primary btn-sm">Ver documento</a>
+          </div>
+        </div>
+      </div>
+
+<!-- Card 2 con botón que abre modal -->
+<div class="col-md-4">
+  <div class="card text-center h-100 shadow-sm">
+    <div class="card-body">
+      <i class="bi bi-ui-checks-grid display-4 text-success mb-3"></i>
+      <h5 class="card-title">Formularios Útiles</h5>
+      <p class="card-text">Selecciona un formulario para descargar según tu necesidad académica.</p>
+      <button class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#formularioModal">
+        Ver formularios
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="formularioModal" tabindex="-1" aria-labelledby="formularioModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content border-0 shadow">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="formularioModalLabel">Descarga de Fichas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="formularioSelect" class="form-label">Selecciona un formulario</label>
+            <select class="form-select" id="formularioSelect" onchange="abrirFormulario(this.value)">
+              <option selected disabled>Elegí un formulario</option>
+              <option target="_blank" value="../ficha\formulario_proyecto_estudiantil.pdf">Ficha de propuestas de meriendas</option>
+
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Card 3 -->
+<div class="col-md-4">
+  <div class="card text-center h-100 shadow-sm">
+    <div class="card-body">
+      <i class="bi bi-folder-fill display-4 text-warning mb-3"></i>
+      <h5 class="card-title">Proyectos en Curso</h5>
+      <p class="card-text">Listado de proyectos en ejecución y sus responsables.</p>
+      <!-- Botón que abre el modal -->
+      <button class="btn btn-outline-warning btn-sm" data-bs-toggle="modal" data-bs-target="#proyectosModal">
+        Acceder
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+ <!-- Modal de Proyectos -->
+<div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="proyectosModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content shadow">
+      <div class="modal-header bg-warning text-dark">
+        <h5 class="modal-title" id="proyectosModalLabel">Proyectos en Curso</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>Proyecto</th>
+                <th>Responsable</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Feria de apuntes y biblioteca digital</td>
+                <td>Secretaría Académica</td>
+                <td>En proceso</td>
+              </tr>
+            
+              <!-- Puedes agregar más proyectos aquí -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Puedes seguir agregando más cards duplicando el bloque -->
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulario de Presentación de Proyectos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .formulario-container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .checkbox-group {
+      margin-top: 10px;
+    }
+
+    .firma {
+      margin-top: 20px;
+      font-style: italic;
+      color: #666;
+    }
+
+    .submit-button {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .seccion {
+      margin-top: 30px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="formulario-container">
+    <h1>Formulario de Presentación de Proyectos</h1>
+    <h2>Centro de Estudiantes SYNESIS</h2>
+
+    <!-- Sección 1 -->
+    <div class="seccion">
+      <h3>1. Información del Alumno o Grupo Responsable</h3>
+
+      <label for="curso">Curso / Año:</label>
+      <input type="text" id="curso" name="curso" required>
+
+      <label for="integrantes">Firmas de los Integrantes del grupo (obligatorio):</label>
+      <textarea id="integrantes" name="integrantes" rows="3" placeholder="Nombre y apellido de cada integrante separados por comas"></textarea>
+    </div>
+
+    <!-- Sección 2 -->
+    <div class="seccion">
+      <h3>2. Detalles del Proyecto</h3>
+      <label for="titulo">Título del proyecto:</label>
+      <input type="text" id="titulo" name="titulo" required>
+
+      <label for="resumen">Resumen del proyecto:</label>
+      <textarea id="resumen" name="resumen" rows="5" required></textarea>
+
+      <label for="objetivos">Objetivos del proyecto:</label>
+      <textarea id="objetivos" name="objetivos" rows="4" required></textarea>
+
+      <label for="beneficios">Beneficios esperados para la comunidad estudiantil:</label>
+      <textarea id="beneficios" name="beneficios" rows="4" required></textarea>
+
+      <label for="recursos">Recursos necesarios:</label>
+      <textarea id="recursos" name="recursos" rows="3"></textarea>
+    </div>
+
+    <!-- Sección 3 -->
+    <div class="seccion">
+      <h3>3. Delegación Formal</h3>
+      <p>Por medio de este formulario, el/la alumno/a responsable delega formalmente al Centro de Estudiantes la evaluación y seguimiento del presente proyecto.</p>
+
+      <label for="fecha_presentacion">Fecha de presentación:</label>
+      <input type="date" id="fecha_presentacion" name="fecha_presentacion" required>
+
+      <label for="firma">Firma del responsable:</label>
+      <input type="text" id="firma" name="firma" required>
+    </div>
+  </div>
+</body>
+</html>
