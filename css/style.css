@@ -68,47 +68,19 @@ main {
   padding: 2rem;
 }
 
-/*==============================
-  galeria Generales
-==============================*/
+/*
+galeria
+*/
 
-/* Galería de objetivos */
-#galeriaObjetivos .gallery-item {
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  .card-hover {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
 
-#galeriaObjetivos .gallery-item img {
-  transition: transform 0.3s ease, filter 0.3s ease;
-  border-radius: 10px;
-}
-
-/* Efectos hover */
-#galeriaObjetivos .gallery-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-#galeriaObjetivos .gallery-item:hover img {
-  filter: brightness(0.95);
-}
-
-/* Modal imagen y contenido */
-.modal-content {
-  border: none;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.modal-body {
-  background-color: #fff8f0;
-  color: #333;
-  padding: 1.5rem;
-  font-size: 1.1rem;
-}
-
+  .card-hover:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+  }
 
 
 

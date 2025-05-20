@@ -185,106 +185,111 @@
 </section>
 
 
-<!-- galeria con modal -->  
 
-<section class="container py-5">
-  <h3 id="objetivos">Objetivos Específicos</h3>
-  <div class="row g-4" id="galeriaObjetivos">
-    <!-- Imagen 1 -->
+<section class="container my-5">
+  <h2 class="text-center mb-4">Objetivos Específicos por Carrera</h2>
+  <div class="row g-4">
+
+    <!-- Desarrollo de Software -->
     <div class="col-md-4">
-      <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#modal1">
-        <img src="./assets/img/recaudar-fondos.jpg" alt="Recaudación de fondos" class="img-fluid rounded shadow-sm">
+      <div class="card card-hover h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#modalSoftware">
+        <div class="card-body">
+          <h5 class="card-title text-primary">Tecnicatura en Desarrollo de Software</h5>
+          <ul class="list-unstyled">
+            <li>✔️ Desarrollar aplicaciones eficientes y seguras.</li>
+            <li>✔️ Aplicar metodologías ágiles en proyectos reales.</li>
+            <li>✔️ Dominar lenguajes de programación actuales.</li>
+            <li>✔️ Diseñar bases de datos y estructuras de datos.</li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <!-- Imagen 2 -->
+    <!-- Gestión de las Organizaciones -->
     <div class="col-md-4">
-      <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#modal2">
-        <img src="./assets/img/transparencia.jpg" alt="Transparencia estudiantil" class="img-fluid rounded shadow-sm">
+      <div class="card card-hover h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#modalGestion">
+        <div class="card-body">
+          <h5 class="card-title text-success">Tecnicatura en Gestión de las Organizaciones</h5>
+          <ul class="list-unstyled">
+            <li>✔️ Interpretar y aplicar normativas organizacionales.</li>
+            <li>✔️ Gestionar recursos humanos y financieros.</li>
+            <li>✔️ Diseñar planes de mejora institucional.</li>
+            <li>✔️ Utilizar herramientas de análisis de datos.</li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <!-- Imagen 3 -->
+    <!-- Profesorado de Educación -->
     <div class="col-md-4">
-      <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#modal3">
-        <img src="./assets/img/espacios.jpg" alt="Espacios de estudio" class="img-fluid rounded shadow-sm">
-      </div>
-    </div>
-
-    <!-- Imagen 4 -->
-    <div class="col-md-4">
-      <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#modal4">
-        <img src="./assets/img/cooperacion.jpg" alt="Cooperación institucional" class="img-fluid rounded shadow-sm">
-      </div>
-    </div>
-
-    <!-- Imagen 5 -->
-    <div class="col-md-4">
-      <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#modal5">
-        <img src="./assets/img/planificacion.jpg" alt="Planificación educativa" class="img-fluid rounded shadow-sm">
+      <div class="card card-hover h-100 shadow-sm" data-bs-toggle="modal" data-bs-target="#modalProfesorado">
+        <div class="card-body">
+          <h5 class="card-title text-warning">Profesorado de Educación</h5>
+          <ul class="list-unstyled">
+            <li>✔️ Planificar propuestas didácticas inclusivas.</li>
+            <li>✔️ Evaluar procesos de enseñanza y aprendizaje.</li>
+            <li>✔️ Incorporar TIC en entornos educativos.</li>
+            <li>✔️ Promover el pensamiento crítico en el aula.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Modals -->
-<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+<!-- Modal: Desarrollo de Software -->
+<div class="modal fade" id="modalSoftware" tabindex="-1" aria-labelledby="modalSoftwareLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <img src="./assets/img/recaudar-fondos.jpg" class="img-fluid rounded-top" alt="">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalSoftwareLabel">Tecnicatura en Desarrollo de Software</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
       <div class="modal-body">
-        <p class="mb-0">Gestionar eventos para la recaudación de fondos y fomentar el sentido de pertenencia.</p>
+        ¿Deseás ver el plan de proyectos en formato PDF?
+      </div>
+      <div class="modal-footer">
+        <a href="https://tiagoraminelli.github.io/CDE-SYNESIS/ficha/CDE-SYNESIS-SOTFWARE.pdf" class="btn btn-primary" target="_blank">Ver PDF</a>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+<!-- Modal: Gestión de las Organizaciones -->
+<div class="modal fade" id="modalGestion" tabindex="-1" aria-labelledby="modalGestionLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <img src="./assets/img/transparencia.jpg" class="img-fluid rounded-top" alt="">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalGestionLabel">Tecnicatura en Gestión de las Organizaciones</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
       <div class="modal-body">
-        <p class="mb-0">Reformar el estatuto para mejorar la transparencia y representatividad estudiantil.</p>
+        ¿Deseás ver el plan de proyectos en formato PDF?
+      </div>
+      <div class="modal-footer">
+        <a href="https://tiagoraminelli.github.io/CDE-SYNESIS/ficha/CDE-SYNESIS-GESTION.pdf" class="btn btn-success" target="_blank">Ver PDF</a>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+<!-- Modal: Profesorado -->
+<div class="modal fade" id="modalProfesorado" tabindex="-1" aria-labelledby="modalProfesoradoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <img src="./assets/img/espacios.jpg" class="img-fluid rounded-top" alt="">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalProfesoradoLabel">Profesorado de Educación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
       <div class="modal-body">
-        <p class="mb-0">Crear espacios físicos y virtuales para el bienestar y estudio colaborativo.</p>
+        ¿Deseás ver el plan de proyectos en formato PDF?
+      </div>
+      <div class="modal-footer">
+        <a href="https://tiagoraminelli.github.io/CDE-SYNESIS/ficha/CDE-SYNESIS-PROFESORADOS.pdf" class="btn btn-warning" target="_blank">Ver PDF</a>
       </div>
     </div>
   </div>
 </div>
-
-<div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <img src="./assets/img/cooperacion.jpg" class="img-fluid rounded-top" alt="">
-      <div class="modal-body">
-        <p class="mb-0">Establecer redes de cooperación institucional con organismos públicos y privados.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <img src="./assets/img/planificacion.jpg" class="img-fluid rounded-top" alt="">
-      <div class="modal-body">
-        <p class="mb-0">Acompañar a estudiantes en la planificación de su trayectoria educativa.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- fin galeria -->
 
 
 
